@@ -2,8 +2,11 @@ import express from "express";
 import bodyParser from "body-parser";
 
 import routes from './src/routes';
+import connectToDb from "./src/config/db";
 
 const app = express();
+
+connectToDb();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
