@@ -10,7 +10,7 @@ const usuarioSchema = new Schema({
   departamento: String,
   municipio: String,
   direccion: String,
-  ingresosMensuales: String,
+  ingresosMensuales: Number,
   imagenPerfilUrl: String,
 }, { timestamps: true });
 
