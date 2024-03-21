@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const usuarioSchema = new Schema({
+const solicitudSchema = new Schema({
   nombres: String,
   apellidos: String,
   email: String,
@@ -14,4 +14,4 @@ const usuarioSchema = new Schema({
   imagenPerfilUrl: String,
 }, { timestamps: true });
 
-export default model('Usuario', usuarioSchema);
+export default model('Solicitud', solicitudSchema);
