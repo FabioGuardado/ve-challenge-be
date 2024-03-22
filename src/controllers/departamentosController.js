@@ -1,4 +1,4 @@
-import Departamento from "../models/Departamento";
+import Departamento from "../models/Departamento.js";
 
 export const getAllDepartamentos = async (req, res) => {
   try {

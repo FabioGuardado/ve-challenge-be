@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { createDepartamento, getAllDepartamentos } from "../controllers/departamentosController";
-import { createMunicipio, getAllMunicipios, getMunicipiosByDepartamentoId } from "../controllers/municipiosController";
+import { createDepartamento, getAllDepartamentos } from "../controllers/departamentosController.js";
+import { createMunicipio, getAllMunicipios, getMunicipiosByDepartamentoId } from "../controllers/municipiosController.js";
 
 const router = Router();
 

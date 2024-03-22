@@ -1,4 +1,4 @@
-import Municipio from "../models/Municipio";
+import Municipio from "../models/Municipio.js";
 
 export const getAllMunicipios = async (req, res) => {
   try {
