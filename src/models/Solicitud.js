@@ -6,6 +6,7 @@ const solicitudSchema = new Schema({
   email: String,
   telefono: String,
   tipoIdentificacion: String,
+  numeroIdentificacion: String,
   documentoIdentificacionUrl: String,
   departamento: String,
   municipio: String,
