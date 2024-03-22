@@ -5,6 +5,7 @@ import { config } from "dotenv";
 
 import routes from "./src/routes";
 import solicitudesRoutes from "./src/routes/solicitudes";
+import catalogosRoutes from './src/routes/catalogs';
 import connectToDb from "./src/config/db";
 
 config();
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 
 app.use(routes);
 app.use("/solicitudes", solicitudesRoutes);
+app.use("/catalogos", catalogosRoutes);
 
 app.listen(5000, () => {
   console.log("Server is listening on port 5000");
