@@ -1,4 +1,4 @@
-import Solicitud from "../models/Solicitud";
+import Solicitud from "../models/Solicitud.js";
 
 export const getAllSolicitudes = async (req, res) => {
   try {
@@ -30,10 +30,21 @@ export const getSolicitudById = async (req, res) => {
 
 export const createSolicitud = async (req, res) => {
   try {
-    const newSolicitud = new Solicitud(req.body);
+    console.log(req.files);
 
-    newSolicitud.save();
-    res.json(newSolicitud);
+    const incomingSolicitudData = {
+      ...req.body,
+      imagenPerfilUrl: "",
+      documentoIdentificacionUrl: "",
+    };
+
+    const newSolicitud = new Solicitud(incomingSolicitudData);
+    if (newSolicitud) {
+      newSolicitud.save();
+      res.json(newSolicitud);
+    } else {
+      res.status(400).send("Faltan atributos necesarios para crear la solicitud.");
+    }
   } catch (error) {
     console.log(error);
     res
